@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>The Gallery and Archives</title>
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: url('assets/background.png') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1 {
+      color: rgb(255, 255, 255);
+      margin-top: 20px;
+      font-size: 90px;
+      font-family: 'League Spartan';
+      text-transform: uppercase;
+      margin-bottom: -15px;
+      margin-top: 30px;
+      margin-left: 10px;
+      
+    }
+
+    h2 {
+      color: white;
+      font-style: bold;
+      font-size: 15px;
+      font-family: 'Libre Baskerville';
+      margin-left: 15px;
+    }
+   
+    .image-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, auto);
+        gap: 5px;
+        max-width: 800px; 
+        width: 90%;
+        margin: 20px auto; 
+        
+    }
+
+    .grid-item {
+        overflow: hidden;
+    }
+
+    .grid-item img {
+        display: block;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .expSiteBtn {
+        display: inline-block;
+        padding: 10px 20px;
+        border: 2px solid rgb(0, 0, 0);
+        border-radius: 25px;
+        background-color: white;
+        text-align: center;
+        font-family: 'League Spartan', sans-serif;
+        font-size: 16px;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+        text-decoration: none;
+        color: black;
+      }
+
+      .expSiteBtn:hover {
+        background-color: rgba(181, 134, 134, 0.61);
+        color: white;
+      }
+
+    /* FOOTER */
+    .content-wrapper-footer {
+      margin-top: auto;
+    }
+
+    .footer {
+      background-color: #00000096;
+      color: white;
+      padding: 40px 20px;
+      font-family: sans-serif;
+      text-align: left;
+    }
+
+    .footer-div {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-div-left-texts,
+    .footer-div-middle-texts,
+    .footer-div-right-texts {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .footer-hr {
+      margin: 30px auto;
+      border-color: #444;
+      max-width: 90%;
+    }
+
+    .bottom-icons {
+      text-align: center;
+      padding-top: 10px;
+    }
+
+    .footer-icons {
+      color: white;
+      margin: 0 10px;
+      font-size: 18px;
+    }
+
+    .footer-bottom-PTAS {
+      font-size: 13px;
+      color: #888;
+    }
+
+    .footer-bottom-texts {
+      color: #888;
+      text-decoration: none;
+      margin: 0 5px;
+      font-family: 'ALegreya Sans', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .go-back {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: rgba(73, 57, 57, 0.342);
+      padding: 5px 17px;
+      border-radius: 10px;
+      z-index: 999;
+      display: flex;
+      gap: 15px;
+    }
+
+    .go-back a {
+      color: white;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+
+    .go-back a:hover {
+      color: #6b2222;
+    }
+
+
+    /* SCROLLBAR */
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #562424;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #562424;
+      border-radius: 10px;
+      border: 3px solid #f0f0f0;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #8d3232;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="go-back">
+
+    <a href="homePage.html#about" style="text-decoration: none; font-family: 'Product Sans';"><i class="fas fa-arrow-circle-left"></i> Back</a>
+</div>
+
+  <h1>Gallery of BSCS-1A</h1>
+  <h2>GO back in time, I guess, to the shared memories made throughout the school year.</h2>
+
+  <div class="image-grid">
+      <div class="grid-item">
+          <img src="assets/gallery1.jpg" style="border-top-left-radius: 20px;">
+      </div>
+      <div class="grid-item">
+          <img src="assets/gallery2.jpg">
+      </div>
+      <div class="grid-item">
+          <img src="assets/gallery3.jpg" style="border-top-right-radius: 20px;">
+      </div>
+      <div class="grid-item">
+          <img src="assets/gallery4.jpg">
+      </div>
+      <div class="grid-item">
+          <img src="assets/gallery5.jpg">
+      </div>
+      <div class="grid-item">
+          <img src="assets/gallery6.jpg">
+      </div>
+      <div class="grid-item">
+          <img src="assets/gallery7.jpg">
+      </div>
+      <div class="grid-item">
+          <img src="assets/gallery8.jpg" >
+      </div>
+      <div class="grid-item">
+          <img src="assets/gallery9.jpg">
+      </div>
+      <div class="grid-item">
+        <img src="assets/gallery10.jpg">
+      </div>
+      <div class="grid-item">
+        <img src="assets/gallery11.jpg">
+        <div style="margin-top: 5px;">
+          <img src="assets/gallery12.jpg">
+        </div>
+      </div>
+        <div class="grid-item">
+          <img src="assets/gallery13.jpg">
+      </div>
+      <div class="grid-item">
+        <img src="assets/gallery14.jpg">
+        <div style="margin-top: 5px;">
+          <img src="assets/gallery15.jpg" style="border-bottom-left-radius: 20px;">
+        </div>
+      </div>
+      <div class="grid-item">
+        <img src="assets/gallery16.jpg">
+      </div>
+      <div class="grid-item">
+        <img src="assets/gallery17.jpg" style="border-bottom-right-radius: 20px;">
+      </div>
+        </div>
+
+  <p style="text-align: center; font-family: 'Product Sans', sans-serif; color: white;">To discover more pictures, head out to our google drive!</p> 
+    <div style="display: flex; justify-content: center; margin-bottom: 10px;"> 
+      <a href="https://drive.google.com/drive/folders/13jjz_Hx5dIs1LLa3_q0XHbZfxxCWrwM9"> <button class="expSiteBtn">Click Here!</button> </a>
+        </div>
+  
+  <!--FOOTER-->
+  <div id="footer" class="content-wrapper-footer">
+  <footer class="footer">
+      <div class="footer-div">
+        <div class="footer-div-left-texts">
+          <p><strong>Group 7 CO.</strong></p>
+          <p style="color: #aaa;">&copy; 2024 Group VII - BSCS 1A. All rights reserved, ata.</p>
+          <p style="color: #888;">This website is a student initiative and a community hub for CS-1A 2024-2025.</p>
+        </div>
+
+        <div class="footer-div-middle-texts">
+
+          <p><strong>Post Address</strong>: Muntinlupa, 1772 Metro Manila</p>
+          <p><strong>Office</strong>: Molave St., Las Pinas City</p>
+          <p><strong>Phone</strong>: +63 995 493 6865</p>
+        </div>
+
+
+        <div class="footer-div-right-texts">
+          <p>Email: <a href="mailto:groupsven@gmail.com" style="color: #bd3434;">groupsven@gmail.com</a></p>
+          <p><strong>Org</strong>: PLMUN-CS1A-G7</p>
+            </div>
+      </div>
+
+      <hr class="footer-hr">
+
+      <div class="bottom-icons">
+
+        <div style="margin: 15px 0;">
+          <a href="https://www.facebook.com/share/15y9pEuca3/" class="footer-icons"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/cs1a.page" class="footer-icons"><i class="fab fa-instagram"></i></a>
+          <a href="https://github.com/" target="_blank" class="footer-icons"><i class="fab fa-github"></i></a>
+          <a href="https://discord.com/" target="_blank" class="footer-icons"><i class="fab fa-discord"></i></a>
+        </div>
+
+        <div class=".footer-bottom-PTAS">
+          <a href="privacy.html" class="footer-bottom-texts">Privacy Policy</a> |
+          <a href="terms.html" class="footer-bottom-texts">Terms of Service</a>
+
+        </div>
+      </div>
+    </footer>
+</div>
+
+</body>
+</html>

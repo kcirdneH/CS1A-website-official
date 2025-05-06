@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Assignments</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+     <link rel="icon" type="image/png" href="assets/icon.png">
+     <link rel="stylesheet" href="css.css">
+
+     <style>
+         * {
+             margin: 0;
+             padding: 0;
+             box-sizing: border-box;
+         }
+     
+         body {
+             font-family: 'Product Sans', sans-serif;
+         }
+     
+         .go-back {
+             position: absolute;
+             top: 10px;
+             right: 10px;
+             background-color: rgba(73, 57, 57, 0.342);
+             padding: 5px 17px;
+             border-radius: 10px;
+             z-index: 999;
+             display: flex;
+             gap: 15px;
+         }
+     
+         .go-back a {
+             color: white;
+             font-size: 1.5rem;
+             font-weight: 100;
+             transition: color 0.3s;
+             text-decoration: none;
+         }
+     
+         .go-back a:hover {
+             color: #6b2222;
+         }
+     
+         #assignments {
+             padding: 20px;
+             text-align: center;
+         }
+     
+         img.main-banner {
+             width: 60%;
+             height: 30%;
+             height: auto;
+             max-width: 5000px;
+             display: block;
+             margin: 20px auto 10px;
+             border: none;
+         }
+     
+         .scroll-wrapper {
+             overflow-x: auto;
+             padding: 10px 0;
+         }
+     
+         .scroll-inner {
+             display: flex;
+             gap: 15px;
+             padding: 10px;
+         }
+     
+         .cards-container {
+             display: flex;
+             flex-wrap: nowrap;
+             justify-content: flex-start;
+             gap: 20px;
+             padding: 20px;
+             overflow-x: auto;
+             height: auto;
+             align-items: flex-start;
+         }
+     
+         .card {
+             width: 260px;
+             background-color: #f0f0f0;
+             border-radius: 20px;
+             padding: 20px;
+             text-align: left;
+             box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.2);
+             flex: 0 0 auto;
+             display: flex;
+             flex-direction: column;
+             position: relative; 
+         }
+     
+         .card img {
+             width: 100%;
+             border-radius: 18px;
+             margin-top: 10px;
+         }
+     
+         .dropdown {
+             margin-top: auto;
+             font-style: italic;
+             color: #777;
+             text-align: center;
+             width: 100%;
+         }
+     
+         .toggle-button {
+             cursor: pointer;
+             font-weight: bold;
+             color: #bfa020;
+             user-select: none;
+             transition: color 0.3s ease;
+         }
+     
+         .dropdown-content {
+             max-height: 0;
+             opacity: 0;
+             overflow: hidden;
+             transition: max-height 0.4s ease, opacity 0.4s ease;
+             background: white;
+             color: black;
+             border-radius: 10px;
+             padding: 0 10px;
+             margin-top: 8px;
+             box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+             font-style: normal;
+             position: absolute; 
+             left: 0; 
+             right: 0; 
+             z-index: 1; 
+             margin-left: 20px; 
+             margin-right: 20px; 
+         }
+     
+         .dropdown-content.show {
+             max-height: 200px;
+             opacity: 1;
+             padding: 10px;
+         }
+     
+         .content-wrapper-footer {
+             flex: 1;
+         }
+     
+         .footer {
+             background-color: #00000096;
+             color: white;
+             padding: 40px 20px;
+             font-family: sans-serif;
+         }
+     
+         .footer-div{
+             max-width: 1200px;
+             margin: auto; display:
+             flex; flex-wrap: wrap;
+             justify-content: space-between;
+             gap: 20px;
+         }
+     
+         .footer-div-left-texts, .footer-div-middle-texts, .footer-div-right-texts {
+             flex: 1;
+             min-width: 250px;
+         }
+     
+         .footer-hr {
+             margin: 30px auto;
+             border-color: #444;
+             max-width: 90%;
+         }
+     
+         .bottom-icons {
+             text-align: center;
+             padding-top: 10px;
+         }
+     
+         .footer-icons {
+             color: white;
+             margin: 0 10px;
+             font-size: 18px;
+         }
+     
+         .footer-bottom-PTAS {
+             font-size: 13px;
+             color: #888;
+         }
+     
+         .footer-bottom-texts {
+             color: #888;
+             text-decoration: none;
+             margin: 0 5px;
+         }
+     
+         .cards-container::-webkit-scrollbar {
+             height: 10px;
+             width: 10px;
+         }
+     
+         .cards-container::-webkit-scrollbar-track {
+             background: #f1f1f100;
+             border-radius: 0px;
+         }
+     
+         .cards-container::-webkit-scrollbar-thumb {
+             background-color: #ba4343;
+             border-radius: 5px;
+             border: 2px solid #f0f0f0;
+         }
+     
+         .cards-container::-webkit-scrollbar-thumb:hover {
+             background-color: #7a5151;
+         }
+     
+         @media (max-width: 600px) {
+             .go-back {
+                 font-size: 1rem;
+                 padding: 5px 10px;
+             }
+     
+             .card {
+                 flex: 0 0 80%;
+             }
+         }
+     </style>
+ </head>
+ <body>
+
+<div class="go-back">
+    <a href="homePage.html#about" style="text-decoration: none; font-family: 'Product Sans';"><i class="fas fa-arrow-circle-left"></i> Back</a>
+  </div>
+  <br>
+  <div id="assignments">
+      <h1 class="leadingHeader">ASSIGNMENTS</h1>
+      <h2 class="subLine1Events">Ongoing assignments and tasks that are due.</h2>
+
+      <img src="assets/assignment-banner.png" class="main-banner">
+
+  <div class="cards-scroll-wrapper">
+      <div class="cards-container">
+
+      <div class="card">
+          <div style="font-size: 1.6em; font-weight: bold;">IMDPROG</div>
+          <div>May 16, 2025</div>
+          <div style="margin-top: 10px; font-weight: bold;">DETAILS</div>
+          <div>Create a C++ program</div>
+          <div class="dropdown">
+              <div class="toggle-button" onclick="toggleDropdown(this)">MORE <i class="fas fa-chevron-down"></i></div>
+              <div class="dropdown-content">
+                  Create a c++ code on everything that you learned in this subject.
+              </div>
+          </div>
+          <div style="margin-top: 10px; font-size: 0.9em;">CS1A • SIR EDMOND SANTIAGO</div>
+          <img src="assets/assignments-1.png">
+      </div>
+
+
+      <div class="card">
+          <div style="font-size: 1.6em; font-weight: bold;">NETCOM</div>
+          <div>Before final examinations</div>
+          <div style="margin-top: 10px; font-weight: bold;">DETAILS</div>
+          <div>Final Projects</div>
+          <div class="dropdown">
+              <div class="toggle-button" onclick="toggleDropdown(this)">MORE <i class="fas fa-chevron-down"></i></div>
+              <div class="dropdown-content">
+                 #1. Finish setting up your VMWARE server <br>
+                 #2. Home network layout using www.draw.io
+              </div>
+          </div>
+          <div style="margin-top: 10px; font-size: 0.9em;">CS1A • SIR DEXTER DIO</div>
+          <img src="assets/assignments-2.png">
+      </div>
+
+
+      <div class="card">
+          <div style="font-size: 1.6em; font-weight: bold;">PCOM</div>
+          <div>May, 8 2025</div>
+          <div style="margin-top: 10px; font-weight: bold;">DETAILS</div>
+          <div>Crafting a Position Paper</div>
+          <div class="dropdown">
+              <div class="toggle-button" onclick="toggleDropdown(this)">MORE <i class="fas fa-chevron-down"></i></div>
+              <div class="dropdown-content">
+                  Create a position paper on the topic of your choice. Along with underlining the topic sentences and the thesis statement.
+              </div>
+          </div>
+          <div style="margin-top: 10px; font-size: 0.9em;">CS1A • MA'AM GRACE BASA</div>
+          <img src="assets/assignments-3.png">
+      </div>
+
+
+      <div class="card">
+          <div style="font-size: 1.6em; font-weight: bold;">WEBTECH</div>
+          <div>May 9 - May 16, 2025</div>
+          <div style="margin-top: 10px; font-weight: bold;">DETAILS</div>
+          <div>Group project: Website Building</div>
+          <div class="dropdown">
+              <div class="toggle-button" onclick="toggleDropdown(this)">MORE <i class="fas fa-chevron-down"></i></div>
+              <div class="dropdown-content">
+                 With your group, think of a weebsite that you want to create, with a minimum of 10 webpages and having it's own database.
+              </div>
+          </div>
+          <div style="margin-top: 10px; font-size: 0.9em;">CS1A • MA'AM MARISSE UMALI</div>
+          <img src="assets/assignments-4.png">
+      </div>
+
+
+      <div class="card">
+          <div style="font-size: 1.6em; font-weight: bold;">NSTP</div>
+          <div>Before final examinations</div>
+          <div style="margin-top: 10px; font-weight: bold;">DETAILS</div>
+          <div>Final output of Immersion</div>
+          <div class="dropdown">
+              <div class="toggle-button" onclick="toggleDropdown(this)">MORE <i class="fas fa-chevron-down"></i></div>
+              <div class="dropdown-content">
+                  #1. Write an essay about your expirience during the Immersion. <br>
+                  #2. As a class, finish the Final Output.
+              </div>
+          </div>
+          <div style="margin-top: 10px; font-size: 0.9em;">CS1A • MA'AM ARGELINE SOTILLO</div>
+          <img src="assets/assignments-5.png">
+      </div>
+
+
+      <div class="card">
+          <div style="font-size: 1.6em; font-weight: bold;">PATHFIT</div>
+          <div>May 9, 2025</div>
+          <div style="margin-top: 10px; font-weight: bold;">DETAILS</div>
+          <div>Rehearsal of Kultura Festival</div>
+          <div class="dropdown">
+              <div class="toggle-button" onclick="toggleDropdown(this)">MORE <i class="fas fa-chevron-down"></i></div>
+              <div class="dropdown-content">
+                  Dance rehearsal will be held at the quadrangle of the Pamantasan ng Lungsod ng Muntinlupa, 5:00PM.
+              </div>
+          </div>
+          <div style="margin-top: 10px; font-size: 0.9em;">CS1A • SIR RADEN MARGATE</div>
+          <img src="assets/assignments-6.png">
+      </div>
+  </div>
+</div>
+</div>
+
+<p style="text-align: center; font-family: 'Product Sans', sans-serif; color: white;">To check out past activies, log in using your insitutional email in Google Classroom</p>
+<br>
+<div style="display: flex; justify-content: center; margin-bottom: 15px;">
+  <a href="https://classroom.google.com"> <button class="expSiteBtn">Click Here!</button> </a>
+      </div>
+
+      <div id="footer" class="content-wrapper-footer">
+      <footer class="footer">
+          <div class="footer-div">
+            <div class="footer-div-left-texts">
+              <p><strong>Group 7 CO.</strong></p>
+              <p style="color: #aaa;">&copy; 2024 Group VII - BSCS 1A. All rights reserved, ata.</p>
+              <p style="color: #888;">This website is a student initiative and a community hub for CS-1A 2024-2025.</p>
+            </div>
+
+            <div class="footer-div-middle-texts">
+
+              <p><strong>Post Address</strong>: Muntinlupa, 1772 Metro Manila</p>
+              <p><strong>Office</strong>: Molave St., Las Pinas City</p>
+              <p><strong>Phone</strong>: +63 995 493 6865</p>
+            </div>
+
+
+               <div class="footer-div-right-texts">
+                  <p>Email: <a href="mailto:groupsven@gmail.com" style="color: #bd3434;">groupsven@gmail.com</a></p>
+                  <p><strong>Org</strong>: PLMUN-CS1A-G7</p>
+                </div>
+          </div>
+
+          <hr class="footer-hr">
+
+          <div class="bottom-icons">
+
+            <div style="margin: 15px 0;">
+              <a href="https://www.facebook.com/share/15y9pEuca3/" class="footer-icons"><i class="fab fa-facebook-f"></i></a>
+              <a href="https://www.instagram.com/cs1a.page" class="footer-icons"><i class="fab fa-instagram"></i></a>
+              <a href="https://github.com/" target="_blank" class="footer-icons"><i class="fab fa-github"></i></a>
+              <a href="https://discord.com/" target="_blank" class="footer-icons"><i class="fab fa-discord"></i></a>
+            </div>
+
+            <div class=".footer-bottom-PTAS">
+              <a href="privacy.html" class="footer-bottom-texts">Privacy Policy</a> |
+              <a href="terms.html" class="footer-bottom-texts">Terms of Service</a>
+            </div>
+          </div>
+        </footer>
+
+
+  </div>
+<script>
+   function toggleDropdown(element) {
+       const content = element.nextElementSibling;
+       const icon = element.querySelector('i');
+
+       content.classList.toggle('show');
+       element.classList.toggle('open');
+
+       if (content.classList.contains('show')) {
+           icon.classList.remove('fa-chevron-down');
+           icon.classList.add('fa-chevron-up');
+           element.innerHTML = 'LESS <i class="fas fa-chevron-up"></i>';
+       } else {
+           icon.classList.remove('fa-chevron-up');
+           icon.classList.add('fa-chevron-down');
+           element.innerHTML = 'MORE <i class="fas fa-chevron-down"></i>';
+       }
+   }
+</script>
+
+
+            </body>
+            </html>

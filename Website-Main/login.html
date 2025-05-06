@@ -1,0 +1,104 @@
+<!doctype html>
+<html>
+<head>
+    <title>Login - Welcome Aboard!</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap.bundle.min.js">
+    <link rel="icon" type="image/png" href="assets/icon.png">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;700&family=League+Spartan:wght@400;700&family=Alegreya+Sans:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+     body {
+         font-family: 'Google Sans', sans-serif;
+         background: url('assets/background.png') no-repeat center center fixed;
+         background-size: cover;
+         color: white;
+         height: 100vh;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         align-items: center;
+         margin: 0;
+     }
+
+     h2 {
+         font-family: 'League Spartan';
+         font-weight: 650;
+         font-size: 50;
+     }
+     
+     p {
+         font-size: 15;
+     }
+     .p1 {
+         color: grey;
+         margin-bottom: 1;
+         font-family: 'Libre Baskerville';
+         font-size: 13px;
+     }
+
+     .btn {
+         font-family: 'Alegreya Sans', sans-serif;
+         font-weight: bold;
+         background-color: #852c2c;
+         border-color: #852c2c;
+         color: white;
+     }
+
+     .btn:hover {
+         background-color: #6b2222;
+         border-color: #6b2222;
+     }
+
+     .container {
+         background-color: #fff;
+         color: black;
+         border-radius: 30px;
+         padding: 2.5rem;
+         box-shadow: 0px 4px 10px rgb(255, 255, 255);
+         border: 3px solid rgb(147, 58, 58);
+         width: 400px;
+     }
+
+     .form-control {
+         border-radius: 10px;
+     }
+</style>
+</head>
+
+<body>
+    <div class="container p-4 bg-light shadow">
+        <p class="p1">Please enter your details</p>
+        <h2 class="mb-1 text-left">Welcome Back</h2>
+        
+        <p>Don't have an account? <a href="signUp.html"> Create an account</a></p>
+
+        <form action="login_process.php" method="post">
+            <div class="input-group input-group-md">
+                <input class="form-control" type="number" placeholder="Student number" name="student_no" required>
+                <button class="btn w-25" type="submit">Submit</button>
+            </div>
+        </form>
+        <div class="d-flex align-items-center my-3">
+            <hr class="flex-grow-1">
+            <span class="text-secondary fs-6 fw-bold mx-2">OR</span>
+            <hr class="flex-grow-1">
+        </div>
+        <form action="homePage.html" method="get">
+            <div class="mb-2 form-floating">
+                <input class="form-control" type="email" placeholder="Email" name="email" required>
+                <label>Email</label>
+            </div>
+            <div class="form-floating">
+                <input class="mb-2 form-control" type="password" placeholder="Password" name="password" required>
+                <label>Password</label>
+            </div>
+            <button class="btn w-100" type="submit">Log in</button>
+        </form>
+    </div>
+</body>
+</html>

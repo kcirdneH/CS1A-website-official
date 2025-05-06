@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>Creators</title>
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
+
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Product Sans', sans-serif;
+      text-align: center;
+      background: url('assets/background.png') no-repeat center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    h1 {
+      color: rgb(255, 255, 255);
+      margin-top: 20px;
+      font-size: 90px;
+      font-family: 'League Spartan';
+      text-transform: uppercase;
+      margin-bottom: -10px;
+    }
+
+    .member-name {
+      font-family: 'Product Sans', sans-serif;
+      font-weight: 900;
+      color: white;
+    }
+
+    .team-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 40px;
+      padding-bottom: 100px;
+    }
+
+    .team-card {
+      background-color: rgba(255, 255, 255, 0.366);
+      border-radius: 25px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.822);
+      margin: 20px;
+      width: 220px;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .team-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+    .team-card h2 {
+      font-size: 18px;
+      margin-top: 10px;
+      margin-bottom: 5px;
+      color: #ffffff;
+    }
+
+    .team-card p {
+      font-size: 14px;
+      color: #ffffff;
+      margin-bottom: 15px;
+    }
+
+    .team-card .social-icons a {
+      display: inline-block;
+      margin: 0 5px;
+      color: #8a3737;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    .team-card .social-icons a:hover {
+      color: #841111; 
+    }
+
+    /* FOOTER */
+    .content-wrapper-footer {
+      margin-top: auto;
+    }
+
+    .footer {
+      background-color: #00000096;
+      color: white;
+      padding: 40px 20px;
+      font-family: sans-serif;
+      text-align: left;
+    }
+
+    .footer-div {
+      max-width: 1200px;
+      margin: auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-div-left-texts,
+    .footer-div-middle-texts,
+    .footer-div-right-texts {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .footer-hr {
+      margin: 30px auto;
+      border-color: #444;
+      max-width: 90%;
+    }
+
+    .bottom-icons {
+      text-align: center;
+      padding-top: 10px;
+    }
+
+    .footer-icons {
+      color: white;
+      margin: 0 10px;
+      font-size: 18px;
+    }
+
+    .footer-bottom-PTAS {
+      font-size: 13px;
+      color: #888;
+    }
+
+    .footer-bottom-texts {
+      color: #888;
+      text-decoration: none;
+      margin: 0 5px;
+      font-family: 'ALegreya Sans', sans-serif;
+      font-weight: 700;
+      font-size: 16px;
+    }
+
+    .go-back {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: rgba(73, 57, 57, 0.342);
+      padding: 5px 17px;
+      border-radius: 10px;
+      z-index: 999;
+      display: flex;
+      gap: 15px;
+    }
+
+    .go-back a {
+      color: white;
+      font-size: 1.5rem;
+      transition: color 0.3s;
+    }
+
+    .go-back a:hover {
+      color: #6b2222;
+    }
+
+
+    /* SCROLLBAR */
+    ::-webkit-scrollbar {
+      width: 12px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: #562424;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: #562424;
+      border-radius: 10px;
+      border: 3px solid #f0f0f0;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background-color: #8d3232;
+    }
+</style>
+</head>
+
+<body>
+  <div class="go-back">
+    <a href="homePage.html#about" style="text-decoration: none; font-family: 'Product Sans';"><i class="fas fa-arrow-circle-left"></i> Back</a>
+</div>
+
+  <h1>The creators</h1>
+  <h2 style="color: white; font-style: bold; font-size: 20px; font-family: 'Libre Baskerville';">Meet the people who started it all!</h2>
+
+  <div class="team-container">
+    <div class="team-card">
+      <img src="assets/jek.jpg">
+      <h2>Jake Hendrick Collado</h2>
+      <p><strong>Front-End Developer</strong></p>
+      <p>Focuses more on the aesthetic and overall appearance of the website.</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/hagakiii"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://x.com/heresteusx"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/hndy.exe/"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <img src="assets/Rosales.jpg">
+      <h2>Howard Rosales</h2>
+      <p><strong>Back-End Developer</strong></p>
+      <p>Handles infrastructures and logic behind our website project.</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/Howardjustin99"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <img src="assets/ald.jpg">
+      <h2>Aldrin Carl Almonte</h2>
+      <p><strong>Overall Creative</strong></p>
+      <p>Created almost some of the pubmats and posters seen in the website.</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/aaaaaadin"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/addddd_i.n/"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <img src="assets/zell.jpg">
+      <h2>Stephen Raziel Villegas</h2>
+      <p><strong>Web Designer</strong></p>
+      <p>Concepts how each page should look, esepcially the user interface.</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/raziel.stephen"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/z.ell6/"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <div class="team-card">
+      <img src="assets/gerome.jpg">
+      <h2>Gerome Rey Lino</h2>
+      <p><strong>Main Researcher</strong></p>
+      <p>Helps on overall research of the website, and ways how to improve it overall.</p>
+      <div class="social-icons">
+        <a href="https://www.facebook.com/geromerey.narciso.9"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/geromerey/"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </div> 
+  
+  <div id="footer" class="content-wrapper-footer">
+  <footer class="footer">
+      <div class="footer-div">
+        <div class="footer-div-left-texts">
+          <p><strong>Group 7 CO.</strong></p>
+          <p style="color: #aaa;">&copy; 2024 Group VII - BSCS 1A. All rights reserved, ata.</p>
+          <p style="color: #888;">This website is a student initiative and a community hub for CS-1A 2024-2025.</p>
+        </div>
+
+        <!--FOOTER-->
+        <div class="footer-div-middle-texts">
+          <p><strong>Post Address</strong>: Muntinlupa, 1772 Metro Manila</p>
+          <p><strong>Office</strong>: Molave St., Las Pinas City</p>
+          <p><strong>Phone</strong>: +63 995 493 6865</p>
+        </div>
+
+
+           <div class="footer-div-right-texts">
+              <p>Email: <a href="mailto:groupsven@gmail.com" style="color: #bd3434;">groupsven@gmail.com</a></p>
+              <p><strong>Org</strong>: PLMUN-CS1A-G7</p>
+            </div>
+      </div>
+
+      <hr class="footer-hr">
+
+      <div class="bottom-icons">
+
+        <div style="margin: 15px 0;">
+          <a href="https://www.facebook.com/share/15y9pEuca3/" class="footer-icons"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://www.instagram.com/cs1a.page" class="footer-icons"><i class="fab fa-instagram"></i></a>
+          <a href="https://github.com/" target="_blank" class="footer-icons"><i class="fab fa-github"></i></a>
+          <a href="https://discord.com/" target="_blank" class="footer-icons"><i class="fab fa-discord"></i></a>
+        </div>
+
+        <div class=".footer-bottom-PTAS">
+          <a href="privacy.html" class="footer-bottom-texts">Privacy Policy</a> |
+          <a href="terms.html" class="footer-bottom-texts">Terms of Service</a>
+
+        </div>
+      </div>
+    </footer>
+</div>
+
+</body>
+</html>

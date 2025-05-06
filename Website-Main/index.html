@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/png" href="assets/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+ <style>
+     @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
+     @import url('https://fonts.googleapis.com/css2?family=Product+Sans&display=swap');
+
+     * {
+         box-sizing: border-box;
+         margin: 0;
+         padding: 0;
+     }
+
+     html, body {
+         height: 100%;
+         font-family: 'Product Sans', sans-serif;
+         background-image: url('assets/background.png');
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         display: flex;
+         flex-direction: column;
+     }
+
+     main {
+         flex: 1;
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100%;
+     }
+
+     .landing {
+         background-color: #852c2c9c;
+         padding: 1rem;
+         width: 70%;
+         min-height: 65vh;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         border-radius: 40px;
+         text-align: center;
+         align-items: center;
+     }
+
+     h1 {
+         font-family: 'League Spartan', sans-serif;
+         text-transform: uppercase;
+         font-size: 5.8rem;
+         color: white;
+         margin-bottom: 1rem;
+     }
+
+     p {
+         font-family: 'Libre Baskerville';
+         font-weight: bold;  
+     }
+
+     .landing p {
+         margin-bottom: 1.5rem;
+         font-size: 1rem;
+         color: white;
+     }
+
+     .expSiteBtn {
+         display: inline-block;
+         padding: 10px 20px;
+         border: 2px solid black;
+         border-radius: 25px;
+         background-color: white;
+         font-family: 'League Spartan', sans-serif;
+         font-size: 16px;
+         cursor: pointer;
+         transition: all 0.3s ease-in-out;
+         text-decoration: none;
+         color: black;
+
+     }
+
+     .expSiteBtn:hover {
+         background-color: #6b2222;
+         color: white;
+     }
+
+     .socials-tab {
+         position: fixed;
+         top: 10px;
+         right: 10px;
+         background-color: rgba(73, 57, 57, 0.342);
+         padding: 5px 17px;
+         border-radius: 10px;
+         z-index: 999;
+         display: flex;
+         gap: 15px;
+     }
+
+     .socials-tab a {
+         color: white;
+         font-size: 1.5rem;
+         transition: color 0.3s;
+     }
+
+     .socials-tab a:hover {
+         color: #6b2222;
+     }
+     
+     .logo-tab {
+         position: fixed;
+         top: 10px;
+         left: 0px;
+         background-color: rgba(73, 57, 57, 0);
+         padding: 1px 17px;
+         display: flex;
+         gap: 15px;
+     }
+
+     footer {
+         text-align: center;
+         padding: 1rem;
+         background: #000000;
+         color: #fff;
+     }
+
+     .pFooter {
+         font-size: 1rem;
+         font-family: 'Product Sans', sans-serif;
+         font-weight: 100;
+     }
+
+     @media (max-width: 768px) {
+     .hero {
+         width: 100%;
+     }
+
+     h1 {
+         font-size: 2.5rem;
+     }
+
+     .hero p {
+         font-size: 1rem;
+     }
+     }
+ </style>
+</head>
+
+<body>
+    <div class="socials-tab">
+        <a href="https://github.com/"><i class="fab fa-github"></i></a>
+        <a href="https://www.facebook.com/share/15y9pEuca3/"><i class="fab fa-facebook"></i></a>
+        <a href="https://discord.gg/qZNT2rzzhb"><i class="fab fa-discord"></i></a>
+    </div>
+
+    <div class="logo-tab">
+        <img src="assets/icon.png" alt="Logo" style="width: 40px; height: 40px; border-radius: 15%;">
+      
+    </div>
+
+    <main>
+        <section class="landing">
+        <h1>Welcome to the CS-1A Website</h1>
+        <p>A place where exploration, learning and communication is always present</p>
+        <a href="login.html" class="expSiteBtn">Enter the website</a>
+            
+        </section>
+    </main>
+
+    <footer>
+        <p class="pFooter">&copy; 2025 Group VII. All rights reserved, ata.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,758 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&display=swap');
+
+/*-------------*/
+/*----ID'S-----*/
+/*-------------*/
+
+#home {
+   scroll-margin-top: 100px;
+   padding-top: 35px;
+}
+
+/*-------------*/
+/*--SCROLLBAR--*/
+/*-------------*/
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #562424;
+  border-radius: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #562424;
+  border-radius: 10px;
+  border: 3px solid #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #8d3232;
+}
+
+
+
+/*-------------*/
+/*-HTML & BODY-*/
+/*-------------*/
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+  background: url('assets/background.png') no-repeat center center fixed;
+  background-size: cover;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+/*-------------*/
+/*---NAV BAR---*/
+/*-------------*/
+
+#socials, #events, #about, #library {
+  scroll-margin-top: 100px;
+  padding-top: 10px; 
+}
+
+.ulNavBar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #852c2c;
+  border-radius: 0 0 15px 15px;
+  position: fixed;
+  top: 0;
+  left: 23%;
+  width: 50%;
+  z-index: 1000;
+  display: flex;         
+  justify-content: center; 
+  align-items: center; 
+  box-shadow: 0 4px 20px 4px rgba(0, 0, 0, 0.709);
+  transition: transform 0.3s ease, opacity 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.ulNavBar.scrolled {
+  opacity: 0.95;
+  transform: translateY(-10px);
+  background-color: #6f1e1ebe; 
+  backdrop-filter: blur(50px);
+}
+
+
+
+.linavCon {
+  margin: 0 10px;
+}
+.linavCon a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.linavCon a:hover {
+    background-color: #7f5a5a;
+}
+a {
+    font-family: 'Alegreya Sans', sans-serif;
+    font-weight: bold;
+}
+
+
+
+/*-------------*/
+/*----HOME-----*/
+/*-------------*/
+
+.top {
+    margin-left: 10px;
+}
+.subLine1{
+    color: rgb(255, 255, 255);
+    margin-right: 12px;
+    font-style: bold;
+    font-size: 20px;
+    font-family: 'Libre Baskerville';
+}
+  .subLine2{
+    color: rgb(255, 255, 255);
+    margin-left: -4px;
+    font-style: bold;
+    font-size: 40px;
+    font-family: 'Libre Baskerville';
+}
+.subLine1, .subLine2, .subLine3{
+    width: 50%;
+    height: 60px;
+    padding: 0;
+    display: inline;
+}
+.divHeader {
+    margin-top: 10px;
+}
+.header1a {
+    color: rgb(255, 255, 255);
+    font-size: 34px;
+    font-family: 'Libre Baskerville';
+    font-style: italic;
+}
+.header1{
+    color: rgb(255, 255, 255);
+    margin-top: -20px;
+    margin-bottom: -20px;
+    font-size: 80px;
+    font-family: 'League Spartan';
+    text-transform:uppercase;
+    margin-bottom: -10px;
+}
+.subheader{
+    color: rgb(255, 255, 255);
+    margin-top: 20px;
+    font-size: 14px;
+    font-family: 'Libre Baskerville';
+    line-height: 1.6;
+}
+.emailSubHeader{
+    color: rgb(255, 255, 255);
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-family: 'Libre Baskerville';
+    font-weight: bold;  
+}
+
+.home-banner-subheader-1 {
+  font-family: 'Product Sans'; 
+  color: white; 
+  position: absolute; 
+  font-size: 16px;
+  margin-left: 105px;
+  top: 115px;
+  text-align: right;
+}
+.home-banner-subheader-2 {
+  font-family: 'Product Sans'; 
+  color: white; 
+  position: absolute; 
+  font-size: 16px;
+  margin-left: 145px;
+  top: 284px;
+  text-align: right;
+}
+.home-banner-subheader-3 {
+  font-family: 'Product Sans'; 
+  color: white; 
+  position: absolute; 
+  font-size: 16px;
+  margin-left: 110px;
+  top: 455px;
+  text-align: right;
+}
+
+.expSiteBtn {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  background-color: white;
+  text-align: center;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  color: black;
+}
+
+.expSiteBtn:hover {
+  background-color: rgba(181, 134, 134, 0.61);
+  color: white;
+}
+
+.minicardBtn {
+  display: inline-block;
+  background-color: #ffffffb9; 
+  color: rgb(0, 0, 0);
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  padding: 9px 13px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 8px 16px #000000aa;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: 'League Spartan', sans-serif;
+  text-decoration: none;
+  font-weight: bold;
+  transform: translateX(-5px);
+  margin-right: 7px;
+
+}
+
+.minicardBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 20px #852c2c;
+  transform: translate(-5px, -5px);
+}
+
+
+/*-------------*/
+/*---SOCIALS---*/
+/*-------------*/
+
+.leadingHeader{ /*leading header is for all leading headers*/
+    color: rgb(255, 255, 255);
+    margin-top: -20px;
+    margin-bottom: -20px;
+    font-size: 80px;
+    font-family: 'League Spartan';
+    text-transform:uppercase;
+    margin-bottom: -10px;
+    text-align: center;
+}
+
+.subLine1Socials{
+    color: rgb(255, 255, 255);
+    margin-right: 12px;
+    font-style: bold;
+    font-size: 20px;
+    font-family: 'Libre Baskerville';
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 30px;
+  }
+  
+  .card {
+    background: #ffffff;
+    padding: 25px;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+  }
+  .card-outter {
+    background: #ffffff57;
+    padding: 25px;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0);
+  }
+
+  .social-card {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 5px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    
+  }
+  
+  .card-left img {
+    width: 56px;
+    height: 56px;
+    border-radius: 12px;
+    object-fit: cover;
+  }
+  
+  .card-center {
+    flex-grow: 3;
+  }
+  
+  .card-center .pTextSocials {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .card-center .subtext {
+    font-size: 14px;
+    color: #555;
+    font-family: 'Alegreya Sans', sans-serif;
+    margin-top: 4px;
+  }
+  
+  
+  img {
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid rgb(255, 255, 255);
+  }
+
+  .pTextSocials {
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-family: 'Product Sans', sans-serif;
+    font-weight: bold;
+    
+  }
+
+  .header1b {
+    color: rgb(255, 255, 255);
+    font-size: 26px;
+    font-family: 'Libre Baskerville';
+    font-style: italic;
+}
+.header1c{
+    color: rgb(255, 255, 255);
+    margin-bottom: 20px;
+    margin-top: -15px;
+    margin-bottom: 5px;
+    font-size: 90px;
+    font-family: 'Product Sans';
+    text-transform:uppercase;
+   
+}
+
+.header2a {
+  color: rgb(255, 255, 255);
+  margin-left: -4px;
+  font-style: bold;
+  font-size: 40px;
+  font-family: 'Libre Baskerville';
+}
+
+.subheaderA{
+  color: rgb(255, 255, 255);
+  margin-top: 20px;
+  font-size: 14px;
+  font-family: 'Libre Baskerville';
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.social-card-middle {
+  position: relative;
+  display: inline-block;
+}
+
+.social-card-middle img {
+  display: block;
+  width: 100%; 
+  height: auto;
+}
+
+.social-card-button {
+  position: absolute;
+  bottom: 15px; 
+  left: 65%;
+  padding: 10px 20px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  background-color: white;
+  text-align: center;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  color: black
+}
+
+.social-card-button-facebook {
+  position: absolute;
+  bottom: 15px; 
+  left: 65%;
+  padding: 10px 20px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  background-color: white;
+  text-align: center;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  color: black
+}
+
+.social-card-button:hover {
+  background-color: rgba(181, 134, 134, 0.61);
+  color: #ffffff;
+}
+
+.social-card-middle-text {
+  color: rgb(255, 255, 255);
+  font-family: 'Product Sans'; 
+  font-weight: bolder; 
+  position: absolute; 
+  margin-left: 20px;
+  font-size: 35px;
+}
+
+.social-card-middle-text-subheader {
+  font-family: 'Product Sans'; 
+  color: white; 
+  position: absolute; 
+  font-size: 14px;
+  margin-left: 20px;
+  bottom: 290px;
+}
+
+
+/*-------------*/
+/*---EVENTS----*/
+/*-------------*/
+
+.subLine1Events{
+  color: rgb(255, 255, 255);
+  margin-right: 12px;
+  font-style: bold;
+  font-size: 20px;
+  font-family: 'Libre Baskerville';
+  text-align: center;
+}
+
+.event-card-header{
+  color: rgb(255, 255, 255);
+  margin-right: 12px;
+  font-style: bold;
+  font-size: 20px;
+  font-family: 'Libre Baskerville';
+  text-align: left;
+}
+
+.event-card-subheader {
+  font-family: 'Product Sans'; 
+  color: white; 
+  font-size: 14px;
+  margin-top: -10px;
+ 
+
+}
+
+.events-btn {
+  position: relative;
+  z-index: 1; /* Bring above image */
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  background-color: white;
+  text-align: center;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  color: black;
+}
+
+
+.events-btn:hover {
+  background-color: rgba(181, 134, 134, 0.61);
+  color: #ffffff;
+}
+
+
+
+/*-------------*/
+/*----ABOUT----*/
+/*-------------*/
+
+.column-about {
+  float: left;
+  width: 33.33%;
+  padding: 30px;
+}
+
+.header1d {
+  color: rgb(255, 255, 255);
+  font-size: 26px;
+  font-family: 'Libre Baskerville';
+  font-style: italic;
+}
+.header1e{
+  color: rgb(255, 255, 255);
+  margin-bottom: 20px;
+  margin-top: -15px;
+  margin-bottom: 5px;
+  font-size: 90px;
+  font-family: 'Product Sans';
+  text-transform:uppercase;
+ 
+}
+
+.subLine1About {
+  color: rgb(255, 255, 255);
+  margin-right: 12px;
+  font-style: bold;
+  font-size: 20px;
+  font-family: 'Libre Baskerville';
+  text-align: center; 
+}
+
+.subLine3{
+  color: rgb(255, 255, 255);
+  margin-left: -15px;
+  font-style: bold;
+  font-size: 40px;
+  font-family: 'Libre Baskerville';
+  padding-left: 15px;
+}
+
+.subheader-about{
+  color: rgb(255, 255, 255);
+  margin-top: 20px;
+  font-size: 14px;
+  font-family: 'Libre Baskerville';
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.about-card {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 5px;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  
+}
+
+.about-column {
+  float: left;
+  width: 33.33%;
+  padding: 30px;
+}
+
+.about-card-right {
+  position: relative;
+  display: inline-block;
+}
+
+.about-card-right img {
+  display: block;
+  width: 100%; 
+  height: auto;
+}
+
+
+.about-card-right-text {
+  color: rgb(255, 255, 255);
+  font-family: 'League Spartan', sans-serif; 
+  font-weight: bolder; 
+  position: absolute; 
+  margin-left: 10px;  
+  font-size: 40px;
+  font-weight: 900;
+  
+}
+
+
+.about-card-mid-img {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  border-color: #00000000;
+  
+}
+
+.about-card-img-txt-header {
+  font-family: 'Product Sans'; 
+  color: white; 
+  position: absolute; 
+  font-size: 30px;
+  margin-left: 10px;
+  bottom: 100px;
+}
+.about-card-img-txt-subheader {
+  font-family: 'Product Sans'; 
+  color: white; 
+  position: absolute; 
+  font-size: 14px;
+  margin-left: 10px;
+  bottom: 355px;
+}
+
+.about-gallery-txt-subheader {
+  font-family: 'Product Sans'; 
+  color: white; 
+  position: absolute; 
+  font-size: 14px;
+  margin-left: 10px;
+  bottom: 85px;
+}
+
+
+.about-card-button {
+  position: absolute;
+  bottom: 15px;
+  left: 65%;
+  padding: 10px 20px;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  background-color: white;
+  text-align: center;
+  font-family: 'League Spartan', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  color: black
+}
+
+.about-card-button:hover {
+  background-color: rgba(181, 134, 134, 0.61);
+  color: #ffffff;
+}
+
+.image-container-about-lower {
+    position: relative;
+    display: inline-block; 
+  
+}
+
+.card-outter-about {
+  background: #ffffff57;
+  padding: 25px;
+  text-align: center;
+  border-radius: 25px;
+  box-shadow: 2px 2px 10px rgb(0, 0, 0);
+}
+
+.minicardBtn-about {
+  position: absolute;
+  bottom: 35px; 
+  left: 15px;
+  display: inline-block;
+  background-color: #ffffffb9; 
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  padding: 9px 13px;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 8px 16px #000000aa;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  font-family: 'League Spartan', sans-serif;
+  text-decoration: none;
+  transform: translateX(-5px);
+}
+
+.minicardBtn-about:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 0 12px 20px #852c2c;
+}
+
+
+/*-------------*/
+/*---FOOTER----*/
+/*-------------*/
+
+.content-wrapper-footer {
+  flex: 1;
+}
+
+.footer {
+  background-color: #00000096;
+  color: white;
+  padding: 40px 20px; 
+  font-family: sans-serif;
+}
+
+.footer-div{
+  max-width: 1200px;
+  margin: auto; display: 
+  flex; flex-wrap: wrap; 
+  justify-content: space-between; 
+  gap: 20px;
+}
+
+.footer-div-left-texts, .footer-div-middle-texts, .footer-div-right-texts {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-hr {
+  margin: 30px auto;
+  border-color: #444; 
+  max-width: 90%;
+}
+
+.bottom-icons {
+  text-align: center;
+  padding-top: 10px;
+}
+
+.footer-icons {
+  color: white;
+  margin: 0 10px; 
+  font-size: 18px;
+}
+
+.footer-bottom-PTAS {
+  font-size: 13px;
+  color: #888;
+}
+
+.footer-bottom-texts {
+  color: #888;
+  text-decoration: none; 
+  margin: 0 5px;
+}

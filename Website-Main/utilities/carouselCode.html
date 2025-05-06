@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carousel Only</title>
+  <style>
+    :root {
+      --bg-color1: #190B0B;
+      --bg-color2: #852C2C;
+      --font-color: #FFFFFF;
+      --accent1: #C9BCC1;
+      --accent2: #474545;
+    }
+
+    body {
+      margin: 0;
+      background-color: var(--bg-color1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .carousel {
+      position: relative;
+      width: 95vw;
+      max-width: 600px;
+      height: 300px;
+      background-color: var(--accent1);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .carousel-nav {
+      display: flex;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      justify-content: space-between;
+      align-items: center;
+      pointer-events: none;
+      padding: 0 10px;
+    }
+
+    .carousel-nav button {
+      width: 40px;
+      height: 40px;
+      background-color: var(--bg-color1);
+      color: var(--accent1);
+      border: 1px solid var(--accent1);
+      border-radius: 50%;
+      pointer-events: auto;
+      cursor: pointer;
+    }
+
+    .carousel-nav button:active {
+      background-color: var(--bg-color2);
+      color: var(--font-color);
+      border: 1px solid var(--font-color);
+    }
+
+    .carousel-content {
+      display: flex;
+      height: 100%;
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+    }
+
+    .slide {
+      flex: 0 0 100%;
+      scroll-snap-align: start;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .carousel-content::-webkit-scrollbar {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="carousel">
+    <div class="carousel-nav">
+      <button>←</button>
+      <button>→</button>
+    </div>
+    <div class="carousel-content">
+      <div class="slide"><img src="https://via.placeholder.com/600x300?text=Slide+1" alt="Slide 1" /></div>
+      <div class="slide"><img src="https://via.placeholder.com/600x300?text=Slide+2" alt="Slide 2" /></div>
+      <div class="slide"><img src="https://via.placeholder.com/600x300?text=Slide+3" alt="Slide 3" /></div>
+    </div>
+  </div>
+
+  <script>
+    const carouselContent = document.querySelector(".carousel-content");
+    const carouselBtn = document.querySelector(".carousel-nav").children;
+
+    carouselBtn[0].onclick = () => {
+      carouselContent.scrollBy({
+        left: -carouselContent.offsetWidth,
+        behavior: "smooth"
+      });
+    };
+
+    carouselBtn[1].onclick = () => {
+      carouselContent.scrollBy({
+        left: carouselContent.offsetWidth,
+        behavior: "smooth"
+      });
+    };
+  </script>
+</body>
+</html>
